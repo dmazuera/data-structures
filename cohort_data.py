@@ -17,16 +17,37 @@ def unique_houses(filename):
 
     """
 
-    # This looks at data and pulls [2] to return a set of houses
+
+
+
     data = open(filename)
     houses = set()
 
-    for line in data:
-        item = line.split("|")
+    for line in data:  #for each thing* in the file
+        item = line.split("|") #distinguish the separate items in the things by splitting
+                                #creates a list for values on each line
         if item[2] != "":
-            houses.add(item[2])
+            houses.add(item[2])     #take the [2] of each line and add it to empty house = *(set)*
 
     return houses
+
+
+
+
+
+
+
+
+    # # This looks at data and pulls [2] to return a set of houses
+    # data = open(filename)
+    # houses = set()
+
+    # for line in data:
+    #     item = line.split("|")
+    #     if item[2] != "":
+    #         houses.add(item[2])
+
+    # return houses
 
 
 # def sort_by_cohort(filename):
